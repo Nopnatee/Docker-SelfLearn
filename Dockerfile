@@ -12,3 +12,11 @@ RUN npm install
 
 # Copy the rest of the app's source code
 COPY . .
+
+# Set port environment variable
+ENV PORT=9000
+# Expose the port the app runs on
+EXPOSE 9000
+
+# Start the app
+CMD ["npm", "start"]
